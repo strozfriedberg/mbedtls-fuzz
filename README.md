@@ -7,7 +7,7 @@ An integral part of this project is the code for a self-communicating instance (
 
 More information about the project is available on the Gotham Digital Science blog: 
 
-[Fuzzing the mbed TLS Library](http://blog.gdssecurity.com/labs/2015/9/21/fuzzing-the-mbed-tls-library.html)
+[Fuzzing the mbed TLS Library](https://web.archive.org/web/20230127213352/https://blog.gdssecurity.com/labs/2015/9/21/fuzzing-the-mbed-tls-library.html)
 
 ## Installation
 
@@ -48,5 +48,5 @@ find . -name 'id*' -type f | grep crashes | sort > crash_files.txt
 
 ## Copyright
 
-Fabian Foerg, Gotham Digital Science, 2015
+Fabian Foerg, Gotham Digital Science, 2015-2025
 
