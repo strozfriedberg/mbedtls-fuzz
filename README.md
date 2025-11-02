@@ -2,7 +2,7 @@
 
 ## About
 
-This project provides code and tools which allow for fuzzing the [mbed TLS library](https://tls.mbed.org/) using the [american fuzzy lop (afl) fuzzer](http://lcamtuf.coredump.cx/afl/).
+This project provides code and tools which allow for fuzzing the [mbed TLS library](https://tls.mbed.org/) using the [american fuzzy lop (afl) fuzzer](https://lcamtuf.coredump.cx/afl/).
 An integral part of this project is the code for a self-communicating instance (the client and server run in a single process) of mbed TLS.
 
 More information about the project is available on the Gotham Digital Science blog: 
@@ -11,7 +11,7 @@ More information about the project is available on the Gotham Digital Science bl
 
 ## Installation
 
-Grab the latest version of afl from the [afl homepage](http://lcamtuf.coredump.cx/afl/) and compile it.
+Grab the latest version of afl from the [afl homepage](https://lcamtuf.coredump.cx/afl/) and compile it.
 
 Update the constants of the scripts in the `fuzz` folder so they point to the desired afl compiler.
 
