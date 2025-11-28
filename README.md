@@ -12,9 +12,9 @@ More information about the project is available on the Gotham Digital Science bl
 ## Installation
 
 Grab the latest version of afl from the [afl homepage](https://lcamtuf.coredump.cx/afl/) and compile it.
-At the time of writing, the latest version is [afl 2.52b](https://lcamtuf.coredump.cx/afl/releases/afl-2.52b.tgz).
+At the time of writing, the latest version is [afl 2.57b](https://github.com/google/AFL/archive/refs/tags/v2.57b.tar.gz).
 
-Set the `AFL_PATH` environment variable with the folder containing the afl binaries: `export AFL_PATH=/usr/local/src/afl-2.52b`
+Set the `AFL_PATH` environment variable with the folder containing the afl binaries: `export AFL_PATH=/usr/local/src/afl-2.57b`
 Extend the `PATH` environment variable with `AFL_PATH`: `export PATH=$PATH:$AFL_PATH`
 Alternatively, update the constants of the scripts in the `fuzz` folder so they point to the desired afl compiler.
 
@@ -31,10 +31,10 @@ Run the `fuzz.sh` script.
 Running the script without arguments prints the usage screen including a description of the tool.
 The script requires the network packet number (at least `1`) that should be fuzzed and the fuzzer number (use `1` to launch the master instance; higher numbers launch slaves).
 
-In the following example, we launch a master instance to fuzz network packet 3 of the self-communicating mbed TLS 2.0.0 binary:
+In the following example, we launch a master instance to fuzz network packet 3 of the self-communicating mbed TLS 2.3.0 binary:
 
 ~~~
-cd mbedtls-2.0.0/fuzz
+cd mbedtls-2.3.0/fuzz
 ./fuzz.sh 3 1
 ~~~
 
