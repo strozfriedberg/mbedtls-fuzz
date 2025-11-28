@@ -11,16 +11,13 @@ More information about the project is available on the Gotham Digital Science bl
 
 ## Installation
 
-Grab the latest version of afl++ from the [afl++ homepage](https://github.com/AFLplusplus/AFLplusplus).
-[Build it](https://github.com/AFLplusplus/AFLplusplus/blob/stable/docs/INSTALL.md) instead of running it in Docker to maximize performance.
+1. Grab the latest version of afl++ from the [afl++ homepage](https://github.com/AFLplusplus/AFLplusplus).
+2. [Build it](https://github.com/AFLplusplus/AFLplusplus/blob/stable/docs/INSTALL.md) instead of running it in Docker to maximize performance.
 At the time of writing, the latest version is [afl++ v4.34c](https://github.com/AFLplusplus/AFLplusplus/releases/tag/v4.34c).
-
-Set the `AFL_PATH` environment variable with the folder containing the afl binaries: `export AFL_PATH=/usr/local/src/AFLplusplus`
-Extend the `PATH` environment variable with `AFL_PATH`: `export PATH=$PATH:$AFL_PATH`
-Alternatively, update the constants of the scripts in the `fuzz` folder so they point to the desired afl compiler.
-
-Run the following command which automatically downloads different versions of mbed TLS, patches them, compiles the code, and sets everything up for fuzzing.
-
+3. Set environment variables.
+3.1. `export AFL_PATH=/usr/local/src/AFLplusplus` # adjust to location of built afl++
+3.2. `export PATH=$PATH:$AFL_PATH`
+4. Run the following command which automatically downloads different versions of mbed TLS, patches them, compiles the code, and sets everything up for fuzzing:
 ```shell
 ./setup.sh
 ```
@@ -36,10 +33,9 @@ To fuzz a specific network packet, execute the script with the packet number (mi
 * Use 1 to initiate the primary fuzzer instance.
 * Unique numbers greater than `1` will start additional fuzzer instances.
 
-In the following example, we launch a main fuzzer instance to fuzz network packet 3 of the self-communicating mbed TLS 2.3.0 binary:
-
+In the following example, we launch a main fuzzer instance to fuzz network packet 3 of the self-communicating mbed TLS 2.28.10 binary:
 ```shell
-cd mbedtls-mbedtls-2.3.0/fuzz/
+cd mbedtls-mbedtls-2.28.10/fuzz/
 ./fuzz.sh 3 1
 ```
 
