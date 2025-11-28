@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Variable AFL_CC is already taken!
 # Add afl-clang-fast to your PATH and/or adapt the following variable:
@@ -21,6 +21,10 @@ export AFL_DONT_OPTIMIZE=0
 
 cd ..
 find . -name CMakeCache.txt -type f -print | xargs /bin/rm -f
-cmake -DCMAKE_C_COMPILER="$AFL_CC_BIN" -DBUILD_SHARED_LIBS=Off -DENABLE_TESTING=Off -DCMAKE_BUILD_TYPE=Debug --clean-first .
+cmake -DCMAKE_C_COMPILER="$AFL_CC_BIN" \
+      -DBUILD_SHARED_LIBS=OFF \
+      -DENABLE_TESTING=OFF \
+      -DCMAKE_BUILD_TYPE=Debug \
+      .
 make clean all
 

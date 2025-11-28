@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # To find crash files, use a command such as the following:
 # find . -name 'id*' -type f | grep crashes | sort > crash_files.txt

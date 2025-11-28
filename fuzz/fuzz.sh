@@ -1,19 +1,19 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
-readonly SELFTLS_BIN="../selftls"
+readonly SELFTLS_BIN='../selftls'
 # Add afl-fuzz to your PATH or the change the following variable:
-readonly AFL_FUZZ="afl-fuzz"
-readonly RAMDISK_PATH="/tmp/afl-ramdisk/mbedtls"
+readonly AFL_FUZZ='afl-fuzz'
+readonly RAMDISK_PATH='/tmp/afl-ramdisk/mbedtls'
 # The following parameter is the peak virtual memory use in MiB of selftls.
 # The parameter is only necessary for ASAN-enabled builds on x86-64.
 # You can determine the value for your selftls using the tool from
 # http://jwilk.net/software/recidivm
 # by running 'recidivm -u M selftls'.
-readonly MEM_REQUIRED="300000000"
+readonly MEM_REQUIRED='300000000'
 # If you want to use the experimental cgroups script under Linux for
 # ASAN-enabled builds on x86-64, set the following path correctly and
 # uncomment the relevant code further down:
-readonly AFL_ASAN_CGROUPS="${HOME}/afl/afl-2.??b/experimental/asan_cgroups/limit_memory.sh"
+readonly AFL_ASAN_CGROUPS="${AFL_PATH}/experimental/asan_cgroups/limit_memory.sh"
 # Set to 0, if you do not have an ASAN-enabled build.
 export AFL_USE_ASAN=1
 
@@ -34,7 +34,7 @@ usage() {
 	mbedtls-fuzz v3.0
 	Fabian Foerg <ffoerg@gdssecurity.com>
 	https://blog.gdssecurity.com/labs/2015/9/21/fuzzing-the-mbed-tls-library.html
-	Copyright 2015 Gotham Digital Science
+	Copyright 2015-2025 Gotham Digital Science
 	EOF
 }
 
