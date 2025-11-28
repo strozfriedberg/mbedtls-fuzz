@@ -58,7 +58,7 @@ main() {
         pushd "${FOLDER_PREFIX}${MBEDTLS_A[$i]}/fuzz" && ./compile.sh; popd
     done
 
-    echo -e "\n  ************\n  If everything compiled correctly, go into one of the 'mbedtls-?.?.?/fuzz/' folders and run './fuzz.sh'\n  ************"
+    echo -e "\n  ************\n  If everything compiled correctly, go into one of the 'mbedtls-mbedtls-?.?.?/fuzz/' folders and run './fuzz.sh'\n  ************"
 }
 
 main "$@"
