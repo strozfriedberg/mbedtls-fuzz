@@ -12,8 +12,11 @@ More information about the project is available on the Gotham Digital Science bl
 ## Installation
 
 Grab the latest version of afl from the [afl homepage](https://lcamtuf.coredump.cx/afl/) and compile it.
+At the time of writing, the latest version is [afl 2.52b](https://lcamtuf.coredump.cx/afl/releases/afl-2.52b.tgz).
 
-Update the constants of the scripts in the `fuzz` folder so they point to the desired afl compiler.
+Set the `AFL_PATH` environment variable with the folder containing the afl binaries: `export AFL_PATH=/usr/local/src/afl-2.52b`
+Extend the `PATH` environment variable with `AFL_PATH`: `export PATH=$PATH:$AFL_PATH`
+Alternatively, update the constants of the scripts in the `fuzz` folder so they point to the desired afl compiler.
 
 Run the following command which automatically downloads different versions of mbed TLS, patches them, compiles the code, and sets everything up for fuzzing.
 
